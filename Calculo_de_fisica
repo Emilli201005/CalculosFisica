@@ -1,0 +1,123 @@
+Calculos de fisica
+App.java
+public class App {
+    public static void main(String[] args)  {
+        CalculosFisica calculosFisica = new CalculosFisica();
+
+        // Calcular Força Peso
+        float massa = 1;
+        float gravidade = 10;
+        float resultado;
+       
+        resultado = calculosFisica . multiplicar (massa , gravidade); 
+        String comentario1 =  String . format ( "A força peso é : " );
+        System.out.println(comentario1);
+        System.out.println(resultado);
+
+        // Calcular a Força centrípeta
+        float massa2 = 100;
+        float velocidade = 80;
+        float raioCurva = 45;
+        float resultadoVelocidade;
+        float resultadoMultiplicacao;
+        float forca;
+
+        resultadoVelocidade = calculosFisica . multiplicar(velocidade, velocidade);
+        
+        resultadoMultiplicacao = calculosFisica .multiplicar(massa2, resultadoVelocidade);
+        
+        forca = calculosFisica . dividir(resultadoMultiplicacao, raioCurva);
+        String comentario2 =  String . format ( "A força peso é : " );
+        System.out.println(comentario2);
+        System.out.println(forca);
+
+        // Calcular Impulso
+        float forcaMedia = 10;
+        float intervaloTempo = 5 ;
+        float impulso;
+
+
+        impulso = calculosFisica . multiplicar(forcaMedia, intervaloTempo);
+        String comentario3 =  String . format ( "O impulso é: " );
+        System.out.println(comentario3);
+        System.out.println(impulso);
+
+        // Calcular Força Elástica
+        float constanteElastica = 20;
+        float variacaoCorpoElastico = 10;
+        float forcaElastica;
+
+        forcaElastica = calculosFisica . multiplicar(constanteElastica, variacaoCorpoElastico );
+        String comentario4 =  String . format ( "A força elástica é: " );
+        System.out.println(comentario4);
+        System.out.println(forcaElastica);
+
+        // Calcular Velocidade média
+        float deslocamento = 15;
+        float intervaloTempoSegundo = 3;
+        float velocidadeMedia;
+        
+        velocidadeMedia = calculosFisica . dividir(deslocamento, intervaloTempoSegundo);
+        String comentario5 =  String . format ( "A velocidade média: " );
+        System.out.println(comentario5);
+        System.out.println(velocidadeMedia);
+
+
+        // Calcular MRU
+        float variacaoEspaco = 10;
+        float intervaloTemp = 2;
+        float velocidadeMedia2;
+        
+        velocidadeMedia2 = calculosFisica . dividir(variacaoEspaco, intervaloTemp);
+        String comentario6 =  String . format ( "A MRU é: " );
+        System.out.println(comentario6);
+        System.out.println(velocidadeMedia2);
+
+        // Calcular MRUV
+        float velocidadeInicial = 200;
+        float aceleracao2 = 10;
+        float tempo = 5;
+        float resultadoMultiplicacao2;
+        float velocidade2;
+
+       
+        resultadoMultiplicacao2 = calculosFisica .multiplicar(aceleracao2, tempo);
+        velocidade2 = calculosFisica . somar (resultadoMultiplicacao2, velocidadeInicial);
+        
+        String comentario7 =  String . format ( "A MRUV é : " );
+        System.out.println(comentario7);
+        System.out.println(velocidade2);
+
+
+      
+
+
+    }
+}
+-------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ---------------------
+
+CalculosFisica.java
+public class CalculosFisica {
+   // Atributos
+   public float somar ( float n1 , float  n2 ) {
+    return n1 + n2;
+}
+
+public float subtrair ( float n1 , float  n2 ){  
+    return n1 - n2;
+}
+
+public  float  multiplicar ( float  n1 , float  n2 ) {
+    return n1 * n2;
+}
+
+public  float  dividir ( float  n1 , float  n2 ) {
+    return n1 / n2;
+}
+
+
+
+
+
+   
+}
